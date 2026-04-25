@@ -132,6 +132,33 @@
   .section-title .accent { color: var(--orange); }
   .section-sub { font-size: 17px; line-height: 1.75; color: rgba(255,255,255,0.55); max-width: 600px; }
 
+  #quiz-strip {
+    background: linear-gradient(135deg, #F9461C, #FFA100);
+    padding: 60px;
+    text-align: center;
+  }
+  .quiz-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 900;
+    color: white;
+    letter-spacing: -1px;
+    margin-bottom: 28px;
+  }
+  .quiz-btn {
+    display: inline-block;
+    background: white;
+    color: #F9461C;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .quiz-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+  
   /* PROBLEM STRIP */
   #problem { background: var(--dark2); padding: 60px; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
   .problem-grid { display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr; gap: 40px; align-items: center; }
@@ -370,6 +397,11 @@
       <div class="problem-solution">✅ Na b.liv não existe meta. Só parceria de verdade.</div>
     </div>
   </div>
+</div>
+
+<div id="quiz-strip">
+  <p class="quiz-text">Quer saber se a b.liv serve para você?</p>
+  <a href="#form" class="quiz-btn">Faça nosso teste e descubra na hora →</a>
 </div>
 
 <section id="why">
