@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>b.liv — Licenciamento 2026</title>
+<title>b.Liv — Licenciamento 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@700&family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700&family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -95,6 +95,7 @@
     position: absolute; right: 0; left: 0; bottom: 0; z-index: 2;
     height: 88vh;
     display: flex; align-items: flex-end; justify-content: center;
+    pointer-events: none;
   }
   .hero-visual img { height: 100%; width: auto; object-fit: contain; object-position: bottom; filter: drop-shadow(-40px 0 80px rgba(249,70,28,0.2)); position: relative; z-index: 2; }
 
@@ -332,6 +333,31 @@
     font-size: clamp(16px, 1.8vw, 26px);  /* ← tamanho do texto */
   }
 }
+  @media (min-width: 901px) and (max-width: 1100px) {
+  .hero-visual {
+    display: none;
+  }
+  #hero {
+    height: auto;
+    min-height: unset;
+    padding: 120px 60px 60px;
+  }
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero-desc {
+    text-align: center;
+    margin: 0 auto 28px;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+}
+
   @media (min-width: 1351px) and (max-width: 1600px) {
   .hero-visual {
     bottom: 0;       /* ← posição vertical da Liv */
@@ -427,9 +453,9 @@
 <body>
 
 <nav>
-  <div class="nav-logo">b.<span>liv</span></div>
+  <img src="https://raw.githubusercontent.com/fatlows/bliv-site1/main/mini logo laranja transp.png" alt="b.Liv" style="height:40px;width:auto;">
   <ul class="nav-links">
-    <li><a href="#why">Por que b.liv</a></li>
+    <li><a href="#why">Por que b.Liv</a></li>
     <li><a href="#how">Como funciona</a></li>
     <li><a href="#liv">Teacher Liv</a></li>
     <li><a href="#pricing">Planos</a></li>
@@ -447,20 +473,20 @@
     <div class="hero-badge">Licenciamento 2026 — Vagas Limitadas</div>
     <h1 class="hero-h1">
       Be a<br>
-      <span class="accent">b.liver.</span><br>
+      <span class="accent">b.Liver.</span><br>
       <span style="color:rgba(255,255,255,0.2)">Or be</span><br>
       <span class="accent2">behind.</span>
     </h1>
-    <p class="hero-tagline">Com a b.liv você tem tudo o que uma franquia 5★ oferece, mas sem as amarras de franquias tradicionais.</p>
-    <p class="hero-desc"><strong>Com a b.liv, você tem metodologia premiada, IA exclusiva e ecossistema completo — sem burocracia, sem contrato pesado, sem taxa sobre faturamento.</strong></p>
+    <p class="hero-tagline">Com a b.Liv você tem tudo o que uma franquia 5★ oferece, mas sem as amarras de franquias tradicionais.</p>
+    <p class="hero-desc"><strong>Com a b.Liv, você tem metodologia premiada, IA exclusiva e ecossistema completo — sem burocracia, sem contrato pesado, sem taxa sobre faturamento.</strong></p>
     <div class="hero-btns">
-      <a href="#form" class="btn-primary">Quero ser parceiro b.liv →</a>
-      <a href="#why" class="btn-secondary">Conhecer mais</a>
+      <a href="#form" class="btn-primary">Quero ser parceiro b.Liv →</a>
+      <a href="#form" class="btn-secondary">Conhecer mais</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item"><div class="stat-num">+100k</div><div class="stat-label">Alunos formados</div></div>
       <div class="stat-item"><div class="stat-num">24<span style="font-size:14px;font-weight:600;color:rgba(249,70,28,0.7)"> meses</span></div><div class="stat-label">Curso completo</div></div>
-      <div class="stat-item"><div class="stat-num">C1</div><div class="stat-label">Nível CEFR</div></div>
+      <div class="stat-item"><div class="stat-num">63<span style="font-size:14px;font-weight:600;color:rgba(249,70,28,0.7)"> anos</span></div><div class="stat-label">De experiência</div></div>
       <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Suporte via IA</div></div>
     </div>
  </div>
@@ -469,8 +495,8 @@
   <img src="https://raw.githubusercontent.com/fatlows/bliv-site1/main/Liv1.png" alt="Teacher Liv">
   <div class="liv-quote-wrapper">
    <div class="liv-quote-bg-mark">«</div>
-    <div class="liv-quote">Não saber<br>inglês é o<br>analfabetismo<br>dos novos<br>tempos.</div>
-    <div class="liv-quote-sub">E o mundo não vai esperar por você!</div>
+    <div class="liv-quote">Vender inglês<br> do jeito certo<br>pode te deixar<br>rico.</div>
+    <div class="liv-quote-sub">E a B.Liv está pronta para <br> enriquecermos juntos!</div>
   </div>
 </div>
 </section>
@@ -480,38 +506,38 @@
     <div class="problem-item">
       <div class="problem-icon">😤</div>
       <div class="problem-text"><strong>Cansado de franquias caras?</strong>Taxa de entrada alta, royalties mensais e regras que sufocam seu negócio.</div>
-      <div class="problem-solution">✅ Na b.liv você paga uma vez e pronto. Sem royalties, sem taxas sobre faturamento.</div>
+      <div class="problem-solution">✅ Na b.Liv você não paga royalties nem taxas sobre faturamento.</div>
     </div>
     <div class="divider"></div>
     <div class="problem-item">
       <div class="problem-icon">📚</div>
-      <div class="problem-text"><strong>Cansado de material didático fraco?</strong>Métodos ultrapassados que não engajam o aluno adulto do século 21.</div>
-      <div class="problem-solution">✅ Na b.liv: metodologia premiada, books modernos e IA 24/7 para seus alunos.</div>
+      <div class="problem-text"><strong>Cansado de material didático fraco?</strong>Métodos ultrapassados que não engajam o aluno do século 21.</div>
+      <div class="problem-solution">✅ Na b.Liv: metodologia premiada, books modernos e IA 24/7 para seus alunos.</div>
     </div>
     <div class="divider"></div>
     <div class="problem-item">
       <div class="problem-icon">🤷</div>
-      <div class="problem-text"><strong>Cansado de ficar sozinho?</strong>Você assina, paga e some. Zero suporte comercial ou pedagógico.</div>
-      <div class="problem-solution">✅ Na b.liv: suporte com especialistas em vendas, marketing e pedagogia.</div>
+      <div class="problem-text"><strong>Cansado de ficar sozinho?</strong>Você assina, paga e eles somem. Zero suporte comercial ou pedagógico.</div>
+      <div class="problem-solution">✅ Na b.Liv: suporte com especialistas em vendas, marketing e pedagogia.</div>
     </div>
     <div class="divider"></div>
     <div class="problem-item">
       <div class="problem-icon">🎯</div>
       <div class="problem-text"><strong>Cansado de metas impossíveis?</strong>Compra mínima obrigatória, multas por desistência e contratos intermináveis.</div>
-      <div class="problem-solution">✅ Na b.liv não existe meta. Só parceria de verdade.</div>
+      <div class="problem-solution">✅ Na b.Liv não existe meta. Só parceria de verdade.</div>
     </div>
   </div>
 </div>
 
 <div id="quiz-strip">
-  <p class="quiz-text">Quer saber se a b.liv serve para você?</p>
+  <p class="quiz-text">Quer saber se a b.Liv serve para você?</p>
   <a href="#form" class="quiz-btn">Faça nosso teste e descubra na hora →</a>
 </div>
 
 <section id="why">
-  <div class="section-label">Por que b.liv</div>
+  <div class="section-label">Por que b.Liv</div>
   <h2 class="section-title">Tudo que uma franquia<br>oferece. <span class="accent">Sem o que aprisiona.</span></h2>
-  <p class="section-sub">Adotamos o modelo HVLP — High Value, Low Price — o que faz da b.liv um ecossistema classe A com valor ultra acessível. Alto valor educacional para o aluno, preço acessível para o mercado.</p>
+  <p class="section-sub">Adotamos o modelo HVLP — High Value, Low Price — o que faz da b.Liv um ecossistema classe A com valor ultra acessível. Alto valor educacional para o aluno, preço acessível para o mercado.</p>
   <div class="why-grid reveal">
     <div class="why-card featured">
       <div>
@@ -537,7 +563,7 @@
     <div class="why-card">
       <div class="why-icon">🤖</div>
       <div class="why-title">IA que trabalha por você</div>
-      <div class="why-desc">Teacher Liv e Looee IA: suporte pedagógico e comercial 24/7. Seus alunos nunca ficam sem ajuda.</div>
+      <div class="why-desc">Suporte pedagógico e comercial 24/7. Você e seus alunos nunca ficam sem ajuda.</div>
     </div>
     <div class="why-card">
       <div class="why-icon">📈</div>
@@ -549,28 +575,38 @@
       <div class="why-title">Enxoval de marketing</div>
       <div class="why-desc">Posts prontos para usar, identidade visual completa e orientação de posicionamento estratégico.</div>
     </div>
+    <div class="why-card">
+      <div class="why-icon">🙋</div>
+      <div class="why-title">Suporte intensivo</div>
+      <div class="why-desc">Plantão diário com especialistas em diversas frentes do negócio para te ajudar a crescer.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📅</div>
+      <div class="why-title">Você não perde seus alunos e nem seu calendário</div>
+      <div class="why-desc">Quando o aluno falta a uma aula, a reposição está gravada e pronta para ele assistir.</div>
+    </div>
   </div>
 </section>
 
 <section id="how">
   <div class="section-label">Como funciona</div>
-  <h2 class="section-title">Do zero ao<br><span class="accent">b.liver</span> em 4 passos.</h2>
+  <h2 class="section-title">Do zero ao<br><span class="accent">b.Liver</span> em 4 passos.</h2>
   <div class="steps reveal">
     <div class="step"><div class="step-num">1</div><div class="step-title">Preencha o&nbsp;formulário</div><div class="step-desc">Nosso time entra em contato em até 24h com a proposta completa personalizada.</div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-title">Assine o contrato leve</div><div class="step-desc">Sem letras miúdas, sem surpresas. Um contrato claro, simples e sem amarras.</div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-title">Receba o ecossistema</div><div class="step-desc">Treinamentos, materiais, acesso à plataforma e suporte especializado.</div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-title">Torne-se um b.liver</div><div class="step-desc">Matricule seus primeiros alunos e veja a metodologia b.liv transformar seu negócio.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-title">Analise o contrato</div><div class="step-desc">Sem letras miúdas, sem surpresas. Um contrato claro, simples e sem amarras.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-title">Ingresse no ecossistema</div><div class="step-desc">Treinamentos, materiais, acesso à plataforma e suporte especializado.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-title">Torne-se um b.Liver</div><div class="step-desc">Matricule seus primeiros alunos e veja a metodologia b.Liv transformar seu negócio.</div></div>
   </div>
 </section>
 
 <section id="get">
   <div class="section-label">O ecossistema completo</div>
-  <h2 class="section-title">Tudo que você recebe<br>como <span class="accent">parceiro b.liv.</span></h2>
+  <h2 class="section-title">Tudo que você recebe<br>como <span class="accent">parceiro b.Liv.</span></h2>
   <div class="get-grid reveal">
     <div class="get-card"><div class="get-card-icon">📖</div><div class="get-card-title">Material didático premium</div><div class="get-card-desc">4 books com conteúdo de cultura, cinema, música e mais. QR Codes inteligentes com áudios e atividades.</div></div>
     <div class="get-card"><div class="get-card-icon">🎬</div><div class="get-card-title">Vídeo aulas de todas as lições</div><div class="get-card-desc">Professores preparam aulas em minutos. Alunos repõem conteúdo sem depender de ninguém.</div></div>
     <div class="get-card"><div class="get-card-icon">🤖</div><div class="get-card-title">Teacher Liv — IA 24/7</div><div class="get-card-desc">IA especialista em inglês disponível para seus alunos a qualquer hora.</div></div>
-    <div class="get-card"><div class="get-card-icon">🏆</div><div class="get-card-title">Certificado internacional</div><div class="get-card-desc">Quizes por lição e emissão de certificado via plataforma com base no CEFR.</div></div>
+    <div class="get-card"><div class="get-card-icon">🏆</div><div class="get-card-title">Certificado com referência internacional</div><div class="get-card-desc">Quizes por lição e emissão de certificado via plataforma com base no CEFR.</div></div>
     <div class="get-card"><div class="get-card-icon">💼</div><div class="get-card-title">Treinamento comercial completo</div><div class="get-card-desc">Captação, agendamento, atendimento e conversão de matrícula do zero.</div></div>
     <div class="get-card"><div class="get-card-icon">📣</div><div class="get-card-title">Suporte especializado</div><div class="get-card-desc">Tira-dúvidas com especialistas em comercial, pedagógico, marketing e administrativo.</div></div>
   </div>
@@ -584,7 +620,7 @@
     <p class="section-sub">Sua escola nunca fecha. A Teacher Liv é nossa inteligência artificial especialista em inglês — disponível 24 horas por dia, 7 dias por semana.</p>
     <div class="liv-features">
       <div class="liv-feat"><div class="liv-feat-icon">💬</div><div class="liv-feat-text"><strong>Suporte ininterrupto</strong><span>Alunos tiram dúvidas a qualquer hora, sem sobrecarregar sua equipe.</span></div></div>
-      <div class="liv-feat"><div class="liv-feat-icon">🎓</div><div class="liv-feat-text"><strong>Altamente treinada</strong><span>Especializada na metodologia b.liv. Ela sabe o que seu aluno estudou.</span></div></div>
+      <div class="liv-feat"><div class="liv-feat-icon">🎓</div><div class="liv-feat-text"><strong>Altamente treinada</strong><span>Especializada na metodologia b.Liv. Ela sabe o que seu aluno estudou.</span></div></div>
       <div class="liv-feat"><div class="liv-feat-icon">📱</div><div class="liv-feat-text"><strong>Sempre acessível</strong><span>Disponível na plataforma junto com vídeo aulas e quizes.</span></div></div>
     </div>
   </div>
@@ -597,46 +633,25 @@
 
 <section id="pricing">
   <div class="section-label" style="text-align:center">Investimento</div>
-  <h2 class="section-title" style="text-align:center">Escolha como<br>tornar-se um <span class="accent">b.liver.</span></h2>
-  <p class="section-sub" style="text-align:center;margin:0 auto">Adesão ilimitada ao ecossistema completo b.liv. Sem taxa sobre faturamento. Sem royalties mensais.</p>
-  <div class="pricing-grid">
-    <div class="price-card featured">
+  <h2 class="section-title" style="text-align:center">Fazer parte da <span class="accent">b.Liv</span><br>é simples e rápido.</h2>
+  <p class="section-sub" style="text-align:center;margin:0 auto">Adesão ilimitada ao ecossistema completo b.Liv. Sem taxa sobre faturamento. Sem royalties mensais.</p>
+  <div style="display:flex; justify-content:center; margin-top:60px;">
+    <div class="price-card featured" style="max-width:600px; width:100%;">
       <div class="price-badge">🔥 Oferta especial</div>
-      <div class="price-label">Para os 10 primeiros</div>
+      <div class="price-label">Para os 10 próximos contratos</div>
       <div class="price-name">Adesão Early Bird</div>
-      <div class="price-old">De R$ 7.000</div>
-      <div class="price-val"><sup>R$</sup>4.900</div>
-      <div class="price-period">à vista no PIX — ou parcelado no cartão</div>
       <div class="price-divider"></div>
       <ul class="price-features">
-        <li>Acesso completo ao ecossistema b.liv</li>
+        <li>Acesso completo ao ecossistema b.Liv</li>
         <li>Material didático com desconto exclusivo</li>
-        <li>Teacher Liv para seus alunos</li>
+        <li>IA 24/7 para seus alunos</li>
         <li>Treinamento pedagógico e comercial</li>
         <li>Enxoval de marketing completo</li>
         <li>Suporte diário com especialistas</li>
-        <li>Acesso à Looee IA comercial</li>
-        <li>Contrato sem multas nem fidelidade</li>
+        <li>IA 24/7 para sua equipe comercial</li>
+        <li>Contrato sem fidelidade</li>
       </ul>
       <a href="#form" class="price-btn primary">Garantir minha vaga agora →</a>
-    </div>
-    <div class="price-card">
-      <div class="price-label">Preço regular</div>
-      <div class="price-name">Adesão Parcelada</div>
-      <div class="price-val" style="font-size:42px"><sup style="font-size:18px">R$</sup>299</div>
-      <div class="price-period">x24 no boleto — já com desconto de pontualidade</div>
-      <div class="price-divider"></div>
-      <ul class="price-features">
-        <li>Acesso completo ao ecossistema b.liv</li>
-        <li>Material didático com desconto exclusivo</li>
-        <li>Teacher Liv para seus alunos</li>
-        <li>Treinamento pedagógico e comercial</li>
-        <li>Enxoval de marketing completo</li>
-        <li>Suporte diário com especialistas</li>
-        <li>Acesso à Looee IA comercial</li>
-        <li>Contrato sem multas nem fidelidade</li>
-      </ul>
-      <a href="#form" class="price-btn outline">Quero começar →</a>
     </div>
   </div>
   <p class="price-note">Proposta válida por tempo limitado. A única regra: cada aluno matriculado adquire seu próprio material didático.</p>
@@ -656,7 +671,7 @@
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">Quais são os preços do material didático?<span class="faq-icon">+</span></div>
-      <div class="faq-a">Book 1: R$ 157 (licenciado) | R$ 187 (aluno). Books 2, 3 e 4: R$ 167 cada (licenciado) | R$ 197 cada (aluno). Parcelável em até 12x no cartão.</div>
+      <div class="faq-a">Os materiais da b.Liv são de alto valor, mas custam apenas 1/3 do valor cobrado em média pelas franquias de idiomas.</div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">Como funciona a Teacher Liv para meus alunos?<span class="faq-icon">+</span></div>
@@ -667,8 +682,8 @@
       <div class="faq-a">Sim! Funciona em presencial ao vivo, online ao vivo e híbrido assíncrono.</div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">A oferta de R$ 4.900 tem prazo?<span class="faq-icon">+</span></div>
-      <div class="faq-a">Sim. Disponível apenas para os 10 primeiros parceiros. Após esse limite, o valor volta para R$ 7.000 ou 24x de R$ 299.</div>
+      <div class="faq-q">Existem condições especiais quem já tem alunos ou usa outro material?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Sim. Temos vantagens especiais para estes casos. Entre em contato para saber mais.</div>
     </div>
   </div>
 </section>
@@ -677,15 +692,15 @@
   <div class="cta-glow"></div>
   <div class="cta-content">
     <div class="cta-urgency">⏰ Apenas 10 vagas na condição especial</div>
-    <h2 class="cta-h">Pare de assistir.<br>Não deixe sua instituição falir.<br>Torne-se um <span class="accent">b.liver.</span></h2>
+    <h2 class="cta-h">Pare de assistir.<br>Não deixe sua instituição falir.<br>Torne-se um <span class="accent">b.Liver.</span></h2>
     <p class="cta-sub">O mercado de ensino de inglês está em expansão. Sua escola pode liderar esse movimento.</p>
-    <a href="#form" class="btn-primary" style="font-size:17px;padding:20px 48px">Quero ser parceiro b.liv agora →</a>
+    <a href="#form" class="btn-primary" style="font-size:17px;padding:20px 48px">Quero ser parceiro b.Liv agora →</a>
   </div>
 </section>
 
 <section id="form">
   <div class="form-wrap reveal">
-    <div class="form-title">Seja um b.liver</div>
+    <div class="form-title">Seja um b.Liver</div>
     <p class="form-sub">Preencha abaixo e nosso time entra em contato em até 24h.</p>
     <div class="form-grid">
       <div class="form-field"><label>Nome completo</label><input type="text" placeholder="Seu nome"></div>
@@ -703,14 +718,14 @@
         </select>
       </div>
     </div>
-    <button class="form-submit">Quero receber a proposta b.liv →</button>
+    <button class="form-submit">Quero receber a proposta b.Liv →</button>
     <p class="form-lgpd">Autorizo a b.Liv a entrar em contato por e-mail e WhatsApp conforme a LGPD.</p>
   </div>
 </section>
 
 <footer>
-  <div class="footer-logo">b.<span>liv</span></div>
-  <div class="footer-text">© 2026 b.liv — Todos os direitos reservados.</div>
+  <img src="https://raw.githubusercontent.com/fatlows/bliv-site1/main/mini logo laranja transp.png" alt="b.Liv" style="height:36px;width:auto;">
+  <div class="footer-text">© 2026 b.Liv — Todos os direitos reservados.</div>
 </footer>
 
 <script>
