@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>b.liv — Licenciamento 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700&family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@700&family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700&family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
     --orange: #F9461C;
@@ -98,34 +98,50 @@
   }
   .hero-visual img { height: 100%; width: auto; object-fit: contain; object-position: bottom; filter: drop-shadow(-40px 0 80px rgba(249,70,28,0.2)); position: relative; z-index: 2; }
 
-  /* QUOTE FLUTUANTE */
-  .liv-quote {
-    position: absolute;
-    top: auto;
-    bottom: 8%;
-    right: 14%;
-    width: 340px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    line-height: 2;
-    color: rgba(255,255,255,0.6);
-    text-align: left;
-    z-index: 10;
-    pointer-events: none;
-  }
-  .liv-quote span {
-    display: block;
-    margin-top: 10px;
-    font-size: 13px;
-    font-family: 'Nunito Sans', sans-serif;
-    color: rgba(249,70,28,0.85);
-    font-weight: 700;
-    letter-spacing: 0.5px;
-  }
+.liv-quote-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1%;
+  width: 28%;          /* ← era 22%, aumentei */
+  z-index: 10;
+  pointer-events: none;
+  padding: 20px 24px 20px 16px;
+}
 
+.liv-quote-bg-mark {
+  position: absolute;
+  top: -150px;
+  left: -100px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 400px;
+  line-height: 1;
+  color: rgba(249,70,28,0.25);
+  z-index: 0;
+  user-select: none;
+}
+
+.liv-quote {
+  position: relative;
+  z-index: 1;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 3.6vw, 60px);
+  letter-spacing: 1px;
+  line-height: 1.1;
+  color: rgba(255,255,255,0.92);
+  text-align: left;
+}
+
+.liv-quote-sub {
+  margin-top: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 700;
+  color: rgba(249,70,28,0.9);
+  position: relative;
+  z-index: 1;
+}
   /* SECTION COMMONS */
   section { padding: 100px 60px; }
   .section-label { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
@@ -298,30 +314,113 @@
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
+
+  @media (min-width: 901px) and (max-width: 1350px) {
+  .hero-visual {
+    bottom: 15vh;    /* ← sobe a Liv, aumente para subir mais */
+    left: 15%;       /* ← move para direita, aumente para empurrar mais */
+  }
+  .hero-visual img {
+    height: 80%;     /* ← tamanho da Liv, reduza para diminuir */
+  }
+  .liv-quote-wrapper {
+    top: 80%;        /* ← posição vertical da citação */
+    right: 2%;       /* ← posição horizontal da citação */
+    width: 25%;      /* ← largura da citação */
+  }
+  .liv-quote {
+    font-size: clamp(16px, 1.8vw, 26px);  /* ← tamanho do texto */
+  }
+}
+  @media (min-width: 1351px) and (max-width: 1600px) {
+  .hero-visual {
+    bottom: 0;       /* ← posição vertical da Liv */
+    left: 20%;       /* ← posição horizontal da Liv */
+  }
+  .hero-visual img {
+    height: 88%;     /* ← tamanho da Liv */
+  }
+  .liv-quote-wrapper {
+    top: 70%;        /* ← posição vertical da citação */
+    right: 0%;       /* ← posição horizontal da citação */
+    width: 26%;      /* ← largura da citação */
+  }
+  .liv-quote {
+    font-size: clamp(20px, 2vw, 32px);  /* ← tamanho do texto */
+  }
+}
+  @media (min-width: 1601px) {
+  .hero-visual {
+    bottom: 0;       /* ← posição vertical da Liv */
+    left: 0;       /* ← posição horizontal da Liv */
+  }
+  .hero-visual img {
+    height: 95%;     /* ← tamanho da Liv */
+  }
+  .liv-quote-wrapper {
+    top: 50%;        /* ← posição vertical da citação */
+    right: -5%;       /* ← posição horizontal da citação */
+    width: 28%;      /* ← largura da citação */
+  }
+  .liv-quote {
+    font-size: clamp(28px, 2.4vw, 48px);  /* ← tamanho do texto */
+  }
+  .liv-quote-sub {
+    font-size: 18px;  /* ← tamanho do subtítulo */
+  }
+}
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
     section { padding: 60px 24px; }
-    #hero { padding: 100px 24px 60px; height: auto; min-height: 100vh; }
-    .hero-visual { display: none; }
-    .liv-quote { display: none; }
-    .hero-stats { flex-wrap: wrap; gap: 24px; }
-    .problem-grid { grid-template-columns: 1fr; }
+   #hero { padding: 90px 24px 40px; height: auto; min-height: 100vh; }
+    .hero-content { max-width: 100%; text-align: center; }
+    .hero-h1 { font-size: 56px; letter-spacing: -2px; text-align: center; }
+    .hero-tagline { font-size: 16px; text-align: center; }
+    .hero-desc { font-size: 14px; text-align: center; }
+    .hero-btns { flex-direction: column; gap: 12px; align-items: center; }
+    .btn-primary { text-align: center; justify-content: center; width: 100%; }
+    .btn-secondary { text-align: center; width: 100%; }
+    .hero-visual { display: none !important; }
+    .liv-quote { display: none !important; }
+   
+    .hero-mobile-liv { display: flex !important; justify-content: center; margin: 16px 0; }
+    .hero-stats { flex-wrap: wrap; gap: 20px; margin-top: 24px; padding-top: 20px; justify-content: center; }
+    .stat-num { font-size: 24px; }
+    #problem { padding: 40px 24px; }
+    .problem-grid { grid-template-columns: 1fr !important; gap: 28px; }
     .divider { display: none; }
+    .problem-item { text-align: left; }
+    .problem-icon { font-size: 28px; margin-bottom: 8px; }
+    #quiz-strip { padding: 40px 24px; }
+    .quiz-text { font-size: 30px; }
+    .quiz-btn { font-size: 14px; padding: 14px 24px; }
     .why-grid { grid-template-columns: 1fr; }
-    .why-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
-    .steps { grid-template-columns: 1fr 1fr; }
+    .why-card.featured { grid-column: span 1; grid-template-columns: 1fr; gap: 24px; }
+    .steps { grid-template-columns: 1fr; gap: 0; }
+    .steps::before { display: none; }
+    .step { display: flex; align-items: flex-start; gap: 20px; text-align: left; padding: 0 0 32px 0; position: relative; }
+    .step::after { content: ''; position: absolute; left: 27px; top: 56px; bottom: 0; width: 2px; background: rgba(249,70,28,0.3); }
+    .step:last-child::after { display: none; }
+    .step-num { margin: 0; flex-shrink: 0; }
+    .step-title { text-align: left; }
+    .step-desc { text-align: left; }
     .get-grid { grid-template-columns: 1fr; }
-    #liv { grid-template-columns: 1fr; padding: 60px 24px; }
-    .liv-img-wrap { order: 1; }
-    .liv-content { order: 2; }
+    #liv { grid-template-columns: 1fr; padding: 40px 24px 40px; gap: 0; position: relative; }
+    .liv-img-wrap { position: absolute; top: 40px; right: 16px; width: 90px; order: 1; }
+    .liv-img-wrap img { max-height: 120px; width: 90px; }
+    .liv-ring { display: none; }
+    .liv-ring2 { display: none; }
+    .liv-content { order: 2; padding-right: 0; }
     .pricing-grid { grid-template-columns: 1fr; }
+    .price-val { font-size: 44px; }
+    .faq-q { font-size: 15px; }
+    #cta { padding: 80px 24px; }
+    .cta-h { font-size: 36px; letter-spacing: -1px; }
+    #form { padding: 60px 24px; }
     .form-grid { grid-template-columns: 1fr; }
     .form-field.full { grid-column: span 1; }
-    footer { flex-direction: column; gap: 12px; text-align: center; }
-    #problem { padding: 40px 24px; }
-    #cta { padding: 80px 24px; }
-    #form { padding: 60px 24px; }
+    footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
   }
 </style>
 </head>
@@ -364,12 +463,16 @@
       <div class="stat-item"><div class="stat-num">C1</div><div class="stat-label">Nível CEFR</div></div>
       <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Suporte via IA</div></div>
     </div>
-  </div>
+ </div>
 
-  <div class="hero-visual">
-    <div class="liv-quote">"Não saber inglês<br>é o analfabetismo<br>dos novos tempos.<br>E o mundo não vai<br>esperar por você."</div>
-    <img src="https://raw.githubusercontent.com/fatlows/bliv-site1/main/Liv1.png" alt="Teacher Liv">
+ <div class="hero-visual">
+  <img src="https://raw.githubusercontent.com/fatlows/bliv-site1/main/Liv1.png" alt="Teacher Liv">
+  <div class="liv-quote-wrapper">
+   <div class="liv-quote-bg-mark">«</div>
+    <div class="liv-quote">Não saber<br>inglês é o<br>analfabetismo<br>dos novos<br>tempos.</div>
+    <div class="liv-quote-sub">E o mundo não vai esperar por você!</div>
   </div>
+</div>
 </section>
 
 <div id="problem">
@@ -453,7 +556,7 @@
   <div class="section-label">Como funciona</div>
   <h2 class="section-title">Do zero ao<br><span class="accent">b.liver</span> em 4 passos.</h2>
   <div class="steps reveal">
-    <div class="step"><div class="step-num">1</div><div class="step-title">Preencha o formulário</div><div class="step-desc">Nosso time entra em contato em até 24h com a proposta completa personalizada.</div></div>
+    <div class="step"><div class="step-num">1</div><div class="step-title">Preencha o&nbsp;formulário</div><div class="step-desc">Nosso time entra em contato em até 24h com a proposta completa personalizada.</div></div>
     <div class="step"><div class="step-num">2</div><div class="step-title">Assine o contrato leve</div><div class="step-desc">Sem letras miúdas, sem surpresas. Um contrato claro, simples e sem amarras.</div></div>
     <div class="step"><div class="step-num">3</div><div class="step-title">Receba o ecossistema</div><div class="step-desc">Treinamentos, materiais, acesso à plataforma e suporte especializado.</div></div>
     <div class="step"><div class="step-num">4</div><div class="step-title">Torne-se um b.liver</div><div class="step-desc">Matricule seus primeiros alunos e veja a metodologia b.liv transformar seu negócio.</div></div>
